@@ -25,8 +25,9 @@ Common : `AWS(EC2,RDS)`, `RESTful API`
 ### PRODUCT ENDPOINT
 - 상품 리스트
 - 상품 디테일
-- 상품 조건별 필터 리스트
-
+- 상품 조건별 필터 리스트 << REQUEST 에서 쿼리 파라미터를 받아서 필요한 기준으로 상품 리스트를 필터링해서 보여준다.
+예를들어, 신상품은 'is_new'라는 파라미터가 들어온다면, 장고의 쿼리셋에서 해당 필터기준을 objects.filter(key=key) 로 가져와서 가공한후 클라이언트 쪽에 데이터를 제공한다.
+ 
 ### ORDER ENDPOINT
 - 장바구니 생성
 - 장바구니 제품 추가
@@ -35,7 +36,7 @@ Common : `AWS(EC2,RDS)`, `RESTful API`
 - CSV 파일 제작 후 API를 구성하여 데이터 등록
 
 ### 배포
-- AWS Ec2와 RDS를 통하여 서버 배포
+- AWS Ec2와 RDS를 통하여 서버 배포 <<
 
 ---
 
